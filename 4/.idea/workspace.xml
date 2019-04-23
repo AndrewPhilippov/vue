@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aabcf2a2-3575-4e29-a7da-699d903252c6" name="Default Changelist" comment="" />
+    <list default="true" id="aabcf2a2-3575-4e29-a7da-699d903252c6" name="Default Changelist" comment="Some more practice on Vue v-on events" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -81,8 +81,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -115,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1555961832591</updated>
       <workItem from="1555961834799" duration="409000" />
-      <workItem from="1556042511238" duration="2308000" />
+      <workItem from="1556042511238" duration="2598000" />
     </task>
     <task id="LOCAL-00001" summary="Some more practice on Vue v-on events">
       <created>1555962177265</created>
@@ -128,11 +129,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2717000" />
+    <option name="totallyTimeSpent" value="3007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
