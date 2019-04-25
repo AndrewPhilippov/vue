@@ -2,16 +2,24 @@ new Vue({
     el: "#app",
     data: {
         counter: 0,
-        result: ''
+        secondCounter: 0
+    },
+    computed: {
+        output: function(){
+            return this.counter > 5 ? 'Greater 5' : 'Lower 5';
+        }
+    },
+    watch: {
+      counter: function(value){
+        var vm = this;
+        setTimeout(function(){
+            vm.counter = 0;
+        }, 2000)
+      }
     },
     methods: {
-        increase: function(){
-            this.counter++;
-            this.result = this.counter > 5 ? 'Greater 5' : 'Lower 5'
-        },
-        decrease: function(){
-            this.counter--;
-            this.result = this.counter > 5 ? 'Greater 5' : 'Lower 5'
+        result(){
+            return this.counter > 5 ? 'Greater 5' : 'Lower 5'
         }
     }
-})
+});

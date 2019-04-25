@@ -10,10 +10,11 @@
 <body>
 
 <div id="app">
-    <button v-on:click="increase">Increase</button>
-    <button v-on:click="decrease">Decrease</button>
-    <p>{{ counter }}</p>
-    <p>{{ result }}</p>
+    <button @click="counter++">Increase</button>
+    <button @click="counter--">Decrease</button>
+    <button @click="secondCounter++">Increase Second</button>
+    <p>{{ counter }} | {{ secondCounter }}</p>
+    <p>{{ result() }} | {{ output }}</p>
 </div>
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
