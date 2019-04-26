@@ -1,0 +1,16 @@
+.demo{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    margin: 16px;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
