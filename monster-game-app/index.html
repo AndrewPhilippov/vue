@@ -12,31 +12,40 @@
         <div class="small-6 columns">
             <h1 class="text-center">YOU</h1>
             <div class="healthbar">
-                <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;">
-
+                <div
+                    class="healthbar
+                    text-center"
+                    style="background-color: green; margin: 0; color: white;"
+                    :style="{width: playerHealth + '%'}"
+                >
+                    {{ playerHealth }}
                 </div>
             </div>
         </div>
         <div class="small-6 columns">
             <h1 class="text-center">MONSTER</h1>
             <div class="healthbar">
-                <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;">
-
+                <div
+                        class="healthbar text-center"
+                        style="background-color: green; margin: 0; color: white;"
+                        :style="{width: monsterHealth + '%'}"
+                >
+                    {{ monsterHealth }}
                 </div>
             </div>
         </div>
     </section>
-    <section class="row controls">
+    <section class="row controls" v-if="!gameIsRunning" v-on:click="startGame">
         <div class="small-12 columns">
             <button id="start-game">START NEW GAME</button>
         </div>
     </section>
-    <section class="row controls">
+    <section class="row controls" v-else>
         <div class="small-12 columns">
-            <button id="attack">ATTACK</button>
-            <button id="special-attack">SPECIAL ATTACK</button>
-            <button id="heal">HEAL</button>
-            <button id="give-up">GIVE UP</button>
+            <button id="attack" v-on:click="attack">ATTACK</button>
+            <button id="special-attack" v-on:click="specialAttack">SPECIAL ATTACK</button>
+            <button id="heal" v-on:click="heal">HEAL</button>
+            <button id="give-up" v-on:click="giveUp">GIVE UP</button>
         </div>
     </section>
     <section class="row log">
@@ -49,5 +58,6 @@
         </div>
     </section>
 </div>
+<script src="app.js"></script>
 </body>
 </html>
