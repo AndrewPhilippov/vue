@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditional Rendering</title>
+</head>
+<body>
+
+<div id="app">
+    <ul>
+        <li v-for="(ingredient, i) in ingredients" :key="ingredient">{{ ingredient }} ({{ i }})</li>
+    </ul>
+    <button v-on:click="ingredients.push('spices')">Add ingredient</button>
+    <hr>
+    <ul>
+        <li v-for="person in persons">
+            <div v-for="(value, key, index) in person">{{ key }}: {{ value }} ({{ index }})</div>
+        </li>
+    </ul>
+    <span v-for="n in 10">{{ n }}</span>
+    <hr>
+    <template v-for="(ingredient, index) in ingredients">
+        <h1>{{ ingredient }}</h1>
+        <p>{{ index }}</p>
+    </template>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
