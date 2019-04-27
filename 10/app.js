@@ -9,4 +9,4 @@ new Vue({
             {name: "Aaron", age: 3, color: "green"},
         ]
     }
-})
+});
