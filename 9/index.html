@@ -16,7 +16,10 @@
         <h1>Heading</h1>
         <p>p tag inside template</p>
     </template>
-    <p v-show="show">Can you also see me?</p>
+    <template v-show="show">
+        <h1>Heading</h1>
+        <p>p tag inside template</p>
+    </template>
     <button v-on:click="show = !show">Switch</button>
 </div>
 
