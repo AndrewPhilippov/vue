@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59279160-dfdb-4b63-844c-de25a25acb41" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="59279160-dfdb-4b63-844c-de25a25acb41" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -128,7 +124,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556382968074</updated>
-      <workItem from="1556382969461" duration="11343000" />
+      <workItem from="1556382969461" duration="12010000" />
     </task>
     <task id="LOCAL-00001" summary="Started first project with Vue - simple app to fight with monster">
       <created>1556391942715</created>
@@ -137,11 +133,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556391942715</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Completed first Vue project - now you can fight with monster and heal yourself if he was rude.">
+      <created>1556444890185</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556444890186</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11343000" />
+    <option name="totallyTimeSpent" value="12010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -171,7 +174,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Started first project with Vue - simple app to fight with monster" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started first project with Vue - simple app to fight with monster" />
+    <MESSAGE value="Completed first Vue project - now you can fight with monster and heal yourself if he was rude." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed first Vue project - now you can fight with monster and heal yourself if he was rude." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/app.css">
