@@ -2,13 +2,17 @@ const data = {
   title: 'The VueJS Instance',
   showParagraph: false
 };
+Vue.component('hello', {
+  template: '<h1>Hello, I am new component!</h1>'
+});
+
 const vm1 = new Vue({
-  el: '#app1',
   data: data,
   methods: {
     show: function() {
       this.showParagraph = true;
       this.updateTitle('The VueJS Instance (Updated)');
+      this.$refs.myButton.innerText = 'Test me'
     },
     updateTitle: function(title) {
       this.title = title;
@@ -26,7 +30,8 @@ const vm1 = new Vue({
   }
 });
 
-console.log(vm1.$data === data);
+vm1.$mount('#app1');
+vm1.$refs.heading.innerText = 'Something else';
 
 setTimeout(function(){
   vm1.title = 'Changed by timer';
@@ -44,3 +49,10 @@ const vm2 = new Vue({
     }
   }
 });
+const vm3 = new Vue({
+  template: '<h1>Hello, i am self made template heading</h1>'
+});
+// vm3.$mount('#app3');
+//Or we also can use regular JS
+vm3.$mount();
+document.getElementById("app3").appendChild(vm3.$el);
