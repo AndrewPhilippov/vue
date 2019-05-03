@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6618ad3e-3d00-4ade-bae3-6fe2ddfab0c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Author.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/New.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Quote.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quote.vue" afterDir="false" />
-    </list>
+    <list default="true" id="6618ad3e-3d00-4ade-bae3-6fe2ddfab0c4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -57,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/New.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="472">
-              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -117,7 +110,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../16 dymamic components and slots assignment" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -150,7 +143,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556884085278</updated>
-      <workItem from="1556884086680" duration="6515000" />
+      <workItem from="1556884086680" duration="6955000" />
     </task>
     <task id="LOCAL-00001" summary="Diving in more advanced components">
       <created>1556884881761</created>
@@ -159,15 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1556884881761</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Completed dynamic components and slots section">
+      <created>1556891180425</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556891180425</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6515000" />
+    <option name="totallyTimeSpent" value="6955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
@@ -194,7 +193,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Diving in more advanced components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Diving in more advanced components" />
+    <MESSAGE value="Completed dynamic components and slots section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed dynamic components and slots section" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/Quote.vue">
@@ -227,7 +227,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/New.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
         </state>
       </provider>
     </entry>
