@@ -30,6 +30,31 @@
                   >
             <div class="alert alert-info" v-if="show">This is some info</div>
           </transition>
+          <transition
+                  appear
+                  mode="out-in"
+                  :name="alertAnimation">
+            <div class="alert alert-info" v-if="show" key="info">This is some info</div>
+            <div class="alert alert-warning" v-else key="warning">This is some warning info</div>
+          </transition>
+          <hr>
+          <button class="btn btn-primary" @click="load = !load">Load / Remove element</button>
+          <br><br>
+          <transition
+            @before-enter="beforeEnter"
+            @enter="enter"
+            @after-enter="afterEnter"
+            @enter-cancelled="enterCancelled"
+
+            @before-leave="beforeLeave"
+            @leave="leave"
+            @after-leave="afterLeave"
+            @leave-cancelled="leaveCancelled"
+
+            :css="false"
+          >
+            <div style="width: 300px; height: 100px; background-color: lightgreen;" v-if="load"></div>
+          </transition>
         </div>
       </div>
     </div>
@@ -42,8 +67,58 @@ export default {
   name: 'app',
   data(){
     return {
-      show: true,
-      alertAnimation: 'fade'
+      show: false,
+      load: true,
+      alertAnimation: 'fade',
+      elWidth: 100
+    }
+  },
+  methods: {
+    beforeEnter(el){
+      console.log('beforeEnter');
+      this.elWidth = 100;
+      el.style.width = this.elWidth + 'px';
+    },
+    enter(el, done){
+      console.log('enter');
+      let round = 1;
+      const interval = setInterval(() => {
+        el.style.width = (this.elWidth + round * 10) + 'px';
+        round++;
+        if(round > 20){
+          clearInterval(interval);
+          done();
+        }
+      }, 20);
+    },
+    afterEnter(el){
+      console.log('afterEnter');
+    },
+    enterCancelled(el){
+      console.log('enterCancelled');
+    },
+    beforeLeave(el){
+      console.log('beforeLeave');
+      this.elWidth = 300;
+      el.style.width = this.elWidth + 'px';
+    },
+    leave(el, done){
+      console.log('leave');
+      let round = 1;
+      const interval = setInterval(() => {
+        el.style.width = (this.elWidth - round * 10) + 'px';
+        round++;
+        if(round > 20){
+          clearInterval(interval);
+          done();
+        }
+      }, 20);
+    },
+    afterLeave(el){
+      console.log('afterLeave');
+    },
+    leaveCancelled(){
+      console.log('leaveCancelled');
     }
   }
 }
