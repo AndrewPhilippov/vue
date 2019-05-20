@@ -55,6 +55,32 @@
           >
             <div style="width: 300px; height: 100px; background-color: lightgreen;" v-if="load"></div>
           </transition>
+          <hr>
+          <button class="btn btn-primary"
+            @click="
+            selectedComponent == 'app-success-alert'
+            ? selectedComponent = 'app-danger-alert'
+            : selectedComponent = 'app-success-alert'"
+          >Toggle Components</button>
+          <br><br>
+          <transition name="fade" mode="out-in">
+            <component :is="selectedComponent"></component>
+          </transition>
+          <hr>
+          <button class="btn btn-primary" @click="addItem">Add Item</button>
+          <br><br>
+          <ul class="list-group">
+          <transition-group name="slide">
+              <li
+                      class="list-group-item"
+                      v-for="(num, index) in numbers"
+                      @click="removeItem(index)"
+                      style="cursor: pointer;"
+                      :key="num">
+                {{ num }}
+              </li>
+          </transition-group>
+          </ul>
         </div>
       </div>
     </div>
@@ -62,6 +88,8 @@
 </template>
 
 <script>
+  import dangerAlert from './components/DangerAlert.vue'
+  import successAlert from './components/SuccessAlert.vue'
 
 export default {
   name: 'app',
@@ -70,7 +98,9 @@ export default {
       show: false,
       load: true,
       alertAnimation: 'fade',
-      elWidth: 100
+      elWidth: 100,
+      selectedComponent: 'app-success-alert',
+      numbers: [1,2,3,4,5]
     }
   },
   methods: {
@@ -119,7 +149,20 @@ export default {
     },
     leaveCancelled(){
       console.log('leaveCancelled');
+    },
+    addItem(){
+      const pos = Math.floor(Math.random() * this.numbers.length);
+      if(this.numbers.indexOf(pos) === -1){
+        this.numbers.splice(pos, 0, this.numbers.length);
+      }
+    },
+    removeItem(index){
+      this.numbers.splice(index,1);
     }
+  },
+  components: {
+    appDangerAlert: dangerAlert,
+    appSuccessAlert: successAlert
   }
 }
 </script>
@@ -155,6 +198,10 @@ export default {
     animation: slide-out 1s ease-out forwards;
     transition: opacity .5s;
     opacity: 0;
+    position: absolute;
+  }
+  .slide-move{
+    transition: transform 1s;
   }
 
   @keyframes slide-in {
