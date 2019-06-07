@@ -4,6 +4,8 @@
         <hr>
         <p>Loaded ID: {{ id }}</p>
         <button @click="navigateToHome" class="btn btn-primary">Go to Home</button>
+        <hr>
+        <router-view></router-view>
     </div>
 </template>
 <script>
@@ -13,12 +15,13 @@
         //         id: this.$route.params.id
         //     }
         // },
-        props: ['id'],
         // watch: {
         //     '$route'(to, from){
         //         this.id = to.params.id;
         //     }
         // },
+
+        // props: ['id'],
         methods: {
             navigateToHome(){
                 this.$router.push('/');
