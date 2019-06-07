@@ -8,11 +8,12 @@
 </template>
 <script>
     export default {
-        data(){
-            return {
-                id: this.$route.params.id
-            }
-        },
+        // data(){
+        //     return {
+        //         id: this.$route.params.id
+        //     }
+        // },
+        props: ['id'],
         // watch: {
         //     '$route'(to, from){
         //         this.id = to.params.id;
