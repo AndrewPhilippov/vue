@@ -20,7 +20,10 @@ export const routes = [
         },
             children: [
             { path: '', component: UserStart },
-            { path: ':id', component: UserDetail },
+            { path: ':id', component: UserDetail, beforeEnter: (to, from, next) => {
+                console.log('Inside route setup');
+                next();
+                } },
             { path: ':id/edit', component: UserEdit, name: "userEdit" },
         ]
     },
