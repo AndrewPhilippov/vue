@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13ae3f1d-e526-4f6c-bfde-99b5afd17973" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/counter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/value.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AnotherCounter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnotherCounter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AnotherResult.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnotherResult.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Counter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Counter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Result.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
-    </list>
+    <list default="true" id="13ae3f1d-e526-4f6c-bfde-99b5afd17973" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -183,7 +168,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../29-final-project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -217,16 +202,15 @@
       <option name="presentableId" value="Default" />
       <updated>1560363206339</updated>
       <workItem from="1560363209861" duration="1589000" />
-      <workItem from="1560397880763" duration="11041000" />
+      <workItem from="1560397880763" duration="11650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12630000" />
+    <option name="totallyTimeSpent" value="13239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17113096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
