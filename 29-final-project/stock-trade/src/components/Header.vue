@@ -18,25 +18,25 @@
                         class="nav-item"
                         tag="li"
                         exact activeClass="active"
-                        to="/" >
-                    <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        to="/portfolio" >
+                    <a class="nav-link">Portfolio<span class="sr-only">(current)</span></a>
                 </router-link>
                 <router-link
                         class="nav-item"
                         tag="li"
                         exact activeClass="active"
-                        to="/portfolio" >
-                    <a class="nav-link">Portfolio <span class="sr-only">(current)</span></a>
+                        to="/stocks" >
+                    <a class="nav-link">Stocks<span class="sr-only">(current)</span></a>
                 </router-link>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Load & Save
+                        Save & Load
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Load</a>
                         <a class="dropdown-item" href="#">Save</a>
+                        <a class="dropdown-item" href="#">Load</a>
                     </div>
                 </li>
             </ul>
