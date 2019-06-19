@@ -43,7 +43,7 @@ const getters = {
                 price: record.price,
             }
         });
-    }
+    },
     funds (state) {
         return state.funds;
     }
