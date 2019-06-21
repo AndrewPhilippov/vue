@@ -2,7 +2,7 @@
     <div class="col-sm-6 col-md-4">
         <div class="card border-success mt-4">
             <div class="card-header text-success">
-                <h3>{{ stock.name }} <small class="lead">Price: {{ stock.price }} | Quantity: {{ stock.quantity }}$</small></h3>
+                <h3>{{ stock.name }} <small class="lead">Price: {{ stock.price }}$ | Quantity: {{ stock.quantity }}</small></h3>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -38,16 +38,17 @@
             }
         },
         methods: {
-            ...mapActions([
-               'sellStock'
-            ]),
+            ...mapActions({
+                placeSellOrder: 'sellStock'
+            }),
             sellStock(){
                 const order = {
                     stockId: this.stock.id,
                     stockPrice: this.stock.price,
                     quantity: +this.quantity,
                 };
-                this.sellStock();
+                this.placeSellOrder(order);
+                this.quantity = 0;
             }
         }
     }
