@@ -19,7 +19,14 @@
                 </router-link>
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link" @click="endDay">End Day</a>
+                </li>
+                <li
+                    class="nav-item dropdown"
+                    :class="{ show: isDropDownOpen }"
+                    @click="isDropDownOpen = !isDropDownOpen"
+                    >
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Save & Load
                     </a>
@@ -45,11 +52,25 @@
 </template>
 
 <script>
+    import { mapActions } from'vuex';
     export default {
         name: "Header",
         computed: {
             funds() {
                 return this.$store.getters.funds;
+            }
+        },
+        methods: {
+            ...mapActions([
+                'randomizeStocks'
+            ]),
+            endDay(){
+                this.randomizeStocks();
+            }
+        },
+        data(){
+            return {
+                isDropDownOpen: false,
             }
         }
     }

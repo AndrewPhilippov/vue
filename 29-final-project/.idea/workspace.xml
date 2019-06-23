@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e77a6c2-bef4-4f03-a803-b9d81f40dfaf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/stock-trade/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/stock-trade/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock-trade/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/stock-trade/src/components/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-trade/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/stock-trade/src/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-trade/src/components/portfolio/Portfolio.vue" beforeDir="false" afterPath="$PROJECT_DIR$/stock-trade/src/components/portfolio/Portfolio.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-trade/src/components/stocks/Stock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/stock-trade/src/components/stocks/Stock.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-trade/src/components/stocks/Stocks.vue" beforeDir="false" afterPath="$PROJECT_DIR$/stock-trade/src/components/stocks/Stocks.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock-trade/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock-trade/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock-trade/src/store/modules/stocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock-trade/src/store/modules/stocks.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stock-trade/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+            <state relative-caret-position="240">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -32,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock-trade/src/components/Header.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+            <state relative-caret-position="504">
+              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -45,7 +43,52 @@
         <entry file="file://$PROJECT_DIR$/stock-trade/src/components/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stock-trade/src/components/stocks/Stocks.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stock-trade/src/components/stocks/Stock.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1656">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stock-trade/src/components/portfolio/Portfolio.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stock-trade/src/store/modules/stocks.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="11" column="75" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stock-trade/src/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -63,6 +106,7 @@
     <findStrings>
       <find>header</find>
       <find>Dropdow</find>
+      <find>navbar-collapse</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,17 +120,17 @@
         <option value="$PROJECT_DIR$/stock-trade/index.html" />
         <option value="$PROJECT_DIR$/stock-trade/src/store.js" />
         <option value="$PROJECT_DIR$/stock-trade/src/data/stocks.js" />
-        <option value="$PROJECT_DIR$/stock-trade/src/App.vue" />
-        <option value="$PROJECT_DIR$/stock-trade/src/store/modules/stocks.js" />
         <option value="$PROJECT_DIR$/stock-trade/src/store/store.js" />
         <option value="$PROJECT_DIR$/stock-trade/src/store/modules/portfolio.js" />
         <option value="$PROJECT_DIR$/stock-trade/src/components/portfolio/Stock.vue" />
         <option value="$PROJECT_DIR$/stock-trade/src/components/portfolio/Portfolio.vue" />
         <option value="$PROJECT_DIR$/stock-trade/src/components/stocks/Stocks.vue" />
         <option value="$PROJECT_DIR$/stock-trade/src/components/stocks/Stock.vue" />
-        <option value="$PROJECT_DIR$/stock-trade/src/main.js" />
-        <option value="$PROJECT_DIR$/stock-trade/src/components/Header.vue" />
         <option value="$PROJECT_DIR$/stock-trade/src/components/Home.vue" />
+        <option value="$PROJECT_DIR$/stock-trade/src/store/modules/stocks.js" />
+        <option value="$PROJECT_DIR$/stock-trade/src/App.vue" />
+        <option value="$PROJECT_DIR$/stock-trade/src/components/Header.vue" />
+        <option value="$PROJECT_DIR$/stock-trade/src/main.js" />
       </list>
     </option>
   </component>
@@ -119,44 +163,6 @@
               <item name="29-final-project" type="462c0819:PsiDirectoryNode" />
               <item name="stock-trade" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="29-final-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="29-final-project" type="462c0819:PsiDirectoryNode" />
-              <item name="stock-trade" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="29-final-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="29-final-project" type="462c0819:PsiDirectoryNode" />
-              <item name="stock-trade" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="29-final-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="29-final-project" type="462c0819:PsiDirectoryNode" />
-              <item name="stock-trade" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="stocks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="29-final-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="29-final-project" type="462c0819:PsiDirectoryNode" />
-              <item name="stock-trade" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="29-final-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="29-final-project" type="462c0819:PsiDirectoryNode" />
-              <item name="stock-trade" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,12 +234,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560577931399</updated>
       <workItem from="1560577935071" duration="33388000" />
-      <workItem from="1560833992773" duration="14936000" />
+      <workItem from="1560833992773" duration="20853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48324000" />
+    <option name="totallyTimeSpent" value="54241000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -252,7 +258,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32952693" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32952693" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -337,13 +343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock-trade/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock-trade/src/store/store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -351,13 +350,6 @@
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stock-trade/src/store/modules/stocks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -375,48 +367,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock-trade/src/components/portfolio/Portfolio.vue">
+    <entry file="file://$PROJECT_DIR$/stock-trade/src/components/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="216">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stock-trade/src/components/stocks/Stocks.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="384">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stock-trade/src/components/stocks/Stock.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+        <state relative-caret-position="1656">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock-trade/src/main.js">
+    <entry file="file://$PROJECT_DIR$/stock-trade/src/components/portfolio/Portfolio.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="312">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock-trade/src/components/Home.vue">
+    <entry file="file://$PROJECT_DIR$/stock-trade/src/store/modules/stocks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="110">
+          <caret line="11" column="75" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock-trade/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stock-trade/src/components/Header.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state relative-caret-position="504">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/vue-resource/types/vue_resource.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/vue-resource/types/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock-trade/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
