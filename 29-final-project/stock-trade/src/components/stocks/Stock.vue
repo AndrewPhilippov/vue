@@ -12,13 +12,14 @@
                                 class="form-group form-control mr-2"
                                 placeholder="Quantity"
                                 v-model="quantity"
+                                :class="{ danger: insufficientFunds }"
                         >
                     </div>
                     <div class="sm-float-right ml-auto mr-2">
                         <button class="btn btn-success"
                                 @click="buyStock"
-                                :disabled="quantity <= 0 || !Number.isInteger(+quantity)"
-                                >Buy
+                                :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(+quantity)"
+                                >{{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
                         </button>
                     </div>
                 </div>
@@ -34,6 +35,14 @@
         data(){
             return {
                 quantity: 0
+            }
+        },
+        computed: {
+            funds(){
+                return this.$store.getters.funds;
+            },
+            insufficientFunds(){
+                return this.quantity * this.stock.price > this.funds;
             }
         },
         methods: {
@@ -56,5 +65,8 @@
     }
     input{
         margin-right: 2rem;
+    }
+    .danger{
+
     }
 </style>
