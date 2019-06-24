@@ -18,7 +18,7 @@
                     <div class="sm-float-right ml-auto mr-2">
                         <button class="btn btn-success"
                                 @click="buyStock"
-                                :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(+quantity)"
+                                :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(Number(quantity))"
                                 >{{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
                         </button>
                     </div>
@@ -50,7 +50,7 @@
                 const order = {
                     stockId: this.stock.id,
                     stockPrice: this.stock.price,
-                    quantity: +this.quantity
+                    quantity: Number(this.quantity),
                 };
                 this.$store.dispatch('buyStock', order);
                 this.quantity = 0;
