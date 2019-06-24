@@ -31,8 +31,8 @@
                         Save & Load
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Save</a>
-                        <a class="dropdown-item" href="#">Load</a>
+                        <a class="dropdown-item" href="#" @click="saveData">Save</a>
+                        <a class="dropdown-item" href="#" @click="loadData">Load</a>
                     </div>
                 </li>
             </ul>
@@ -61,11 +61,23 @@
             }
         },
         methods: {
-            ...mapActions([
-                'randomizeStocks'
-            ]),
+            ...mapActions({
+                randomizeStocks: 'randomizeStocks',
+                fetchData: 'loadData',
+            }),
             endDay(){
                 this.randomizeStocks();
+            },
+            saveData(){
+                const data = {
+                    funds: this.$store.getters.funds,
+                    stockPortfolio: this.$store.getters.stockPortfolio,
+                    stocks: this.$store.getters.stocks,
+                };
+                this.$http.put('data.json', data);
+            },
+            loadData(){
+                this.fetchData();
             }
         },
         data(){
