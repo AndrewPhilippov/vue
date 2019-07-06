@@ -12,12 +12,10 @@ axios.defaults.baseURL = 'https://vuejs-http-f341c.firebaseio.com';
 axios.defaults.headers.get['Accepts'] = 'application.json';
 
 const reqInterceptor = axios.interceptors.request.use(config => {
-   console.log('Request interceptor: ', config);
    return config;
 });
 
 const resInterceptor = axios.interceptors.response.use(res => {
-    console.log('Response interceptor: ', res);
     return res;
 });
 

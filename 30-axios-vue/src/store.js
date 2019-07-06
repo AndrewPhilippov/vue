@@ -39,7 +39,6 @@ export default new Vuex.Store({
                 returnSecureToken: true
             })
                 .then(response => {
-                    console.log(response);
                     commit('authUser', {
                         token: response.data.idToken,
                         userId: response.data.localId
@@ -78,8 +77,6 @@ export default new Vuex.Store({
                 returnSecureToken: true
             })
                 .then(response => {
-                    console.log(response);
-                    console.log(response.data.localId);
                     commit('authUser', {
                         token: response.data.idToken,
                         userId: response.data.localId
@@ -121,7 +118,6 @@ export default new Vuex.Store({
                         user.id = key;
                         users.push(user);
                     }
-                    console.log(users);
                     commit('storeUser', users[0])
                 })
                 .catch(err => console.log(err));

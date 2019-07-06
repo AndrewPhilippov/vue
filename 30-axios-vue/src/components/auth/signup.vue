@@ -13,7 +13,6 @@
                             v-model="email">
                     <p v-if="!$v.email.email">Please, provide a valid email 'youremail@email.com'.</p>
                     <p v-if="!$v.email.required">This field must not be empty.</p>
-<!--                    <p v-if="!$v.email.unique">This email already exist</p>-->
                 </div>
                 <div class="input" :class="{
                     invalid: $v.age.$error
@@ -125,7 +124,6 @@
                     hobbies: this.hobbyInputs.map(hobby => hobby.value),
                     terms: this.terms
                 };
-                console.log(formData);
                 this.$store.dispatch('signup', formData)
             }
         },
