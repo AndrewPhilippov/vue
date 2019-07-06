@@ -2,19 +2,28 @@
     <div id="signup">
         <div class="signup-form">
             <form @submit.prevent="onSubmit">
-                <div class="input">
+                <div class="input" :class="{
+                    invalid: $v.email.$error
+                    }">
                     <label for="email">Mail</label>
                     <input
                             type="email"
                             id="email"
+                            @blur="$v.email.$touch()"
                             v-model="email">
+                    <p v-if="!$v.email.email">Please, provide a valid email 'youremail@email.com'.</p>
+                    <p v-if="!$v.email.required">This field must not be empty.</p>
                 </div>
-                <div class="input">
+                <div class="input" :class="{
+                    invalid: $v.age.$error
+                    }">
                     <label for="age">Your Age</label>
                     <input
                             type="number"
                             id="age"
+                            @blur="!$v.age.$touch()"
                             v-model.number="age">
+                    <p v-if="!$v.age.minVal">You should be at least {{ $v.age.$params.minVal.min }} years old</p>
                 </div>
                 <div class="input">
                     <label for="password">Password</label>
@@ -69,6 +78,7 @@
 </template>
 
 <script>
+    import { required, email, numeric, minValue } from 'vuelidate/lib/validators'
     export default {
         data () {
             return {
@@ -104,6 +114,18 @@
                 };
                 console.log(formData);
                 this.$store.dispatch('signup', formData)
+            }
+        },
+        validations: {
+            email: {
+                required,
+                email
+            },
+            age: {
+                required,
+                numeric,
+                minVal: minValue(18),
+
             }
         }
     }
@@ -148,6 +170,14 @@
         outline: none;
         border: 1px solid #521751;
         background-color: #eee;
+    }
+
+    .input.invalid label {
+        color: red;
+    }
+    .input.invalid input {
+        border: 1px solid red;
+        background-color: #ffc9aa;
     }
 
     .input select {
