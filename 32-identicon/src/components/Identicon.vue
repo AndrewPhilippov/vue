@@ -10,6 +10,7 @@
       </div>
       <div>
         Output:
+        <div v-html="identicon"></div>
       </div>
     </div>
   </div>
@@ -24,7 +25,9 @@ export default {
     }
   },
   computed: {
-
+    identicon () {
+      return jdenticon.toSvg(this.textInput, 200)
+    }
   },
   name: 'identicon',
   props: {
@@ -32,7 +35,7 @@ export default {
   },
   methods: {
     onInput (event) {
-      console.log(event.target.value)
+      this.textInput = event.target.value
     }
   }
 }
