@@ -1,5 +1,5 @@
 <template>
-    
+    <li>VideoListItem</li>
 </template>
 
 <script>
