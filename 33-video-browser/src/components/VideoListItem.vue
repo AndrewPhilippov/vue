@@ -1,13 +1,10 @@
 <template>
-    <ul>
-
-    </ul>
+    
 </template>
 
 <script>
     export default {
-        name: "VideoList",
-        props: ['videos']
+        name: "VideoListItem"
     }
 </script>
 
