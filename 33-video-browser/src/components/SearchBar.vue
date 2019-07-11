@@ -1,8 +1,6 @@
 <template>
     <div>
-        <label for="">
-            <input type="text" @input="onInput">
-        </label>
+        <input type="text" @input="onInput">
     </div>
 </template>
 <script>
@@ -15,4 +13,12 @@
         }
     }
 </script>
-<style></style>
+<style scoped lang="postcss">
+    input{
+        width: 75%;
+    }
+    div{
+        text-align: center;
+        margin: 20px;
+    }
+</style>
