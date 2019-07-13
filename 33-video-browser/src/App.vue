@@ -13,7 +13,7 @@
     import VideoList from './components/VideoList'
     import VideoDetail from "./components/VideoDetail";
 
-    const API_KEY = '[API_KEY_HERE]';
+    const API_KEY = 'AIzaSyA5F0GQQOvXUHhh2zyWFOTDWInlRVjlpeA';
     export default {
         name: 'App',
         components: {
