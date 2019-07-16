@@ -6,7 +6,12 @@
   <body>
 
     <h1>Vue Basics</h1>
-    <div id="app"> </div>
+    <div id="app">
+      <h2>{{ title }}</h2>
+      <p>My name is {{ name }}</p>
+      <input type="text" @keyup="updateName">
+      <input type="text" @keypress="updateName">
+    </div>
 
     <script src="app.js"></script>
   </body>
