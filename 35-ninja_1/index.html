@@ -8,9 +8,14 @@
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{ title }}</h2>
-      <p>My name is {{ name }}</p>
-      <input type="text" @keyup="updateName">
-      <input type="text" @keypress="updateName">
+      <ul>
+        <li v-for="item in items">{{ item }}</li>
+      </ul>
+      <div v-for="(ninja, index) in ninjas">
+        <p>{{ ninja.name }}</p>
+        <p>{{ ninja.belt }}</p>
+        <p>{{ ninja.age }}</p>
+      </div>
     </div>
 
     <script src="app.js"></script>
