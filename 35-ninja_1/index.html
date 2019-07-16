@@ -2,11 +2,26 @@
   <head>
     <title>Vue.js Basics</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <style>
+      .one{
+        color: lime;
+      }
+      .two{
+        text-decoration: line-through;
+      }
+    </style>
   </head>
   <body>
 
     <h1>Vue Basics</h1>
-    <div id="app"> </div>
+
+    <div id="app">
+      <h2>{{ title }}</h2>
+      <p>{{ greet('morning') }}</p>
+      <a :href="url">YouTube</a>
+      <div :class="classes">Classes from Instance</div>
+      <input type="text" :value="name">
+    </div>
 
     <script src="app.js"></script>
   </body>
