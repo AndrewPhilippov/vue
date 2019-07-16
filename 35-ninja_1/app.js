@@ -5,8 +5,8 @@ new Vue({
         name: 'Andrew'
     },
     methods: {
-       updateName(e) {
-           this.name = e.target.value;
+       logMessage(){
+           console.log('Hello World!');
        }
     }
 });

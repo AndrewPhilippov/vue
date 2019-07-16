@@ -8,9 +8,9 @@
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{ title }}</h2>
-      <p>My name is {{ name }}</p>
-      <input type="text" @keyup="updateName">
-      <input type="text" @keypress="updateName">
+      <button @click.alt="logMessage">Alt cllick me!</button>
+      <button @click.shift="logMessage">Shift click me</button>
+      <a href="http://www.google.com" @click.prevent="logMessage">Google Link</a>
     </div>
 
     <script src="app.js"></script>
