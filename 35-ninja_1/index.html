@@ -8,9 +8,9 @@
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{ title }}</h2>
-      <p>My name is {{ name }}</p>
-      <input type="text" @keyup="updateName">
-      <input type="text" @keypress="updateName">
+      <p v-if="showName">{{ name }}</p>
+      <p v-else>{{ age }}</p>
+      <button @click="showName = !showName">Toggle Name</button>
     </div>
 
     <script src="app.js"></script>
