@@ -15,31 +15,48 @@
 </template>
 
 <script>
+import db from'@/firebase/init'
 export default {
   name: 'Index',
   data() {
     return {
-      smoothies: [
-        {
-          title: 'Ninja Brew',
-          slug: 'ninja-brew',
-          ingredients: ['bananas', 'coffee', 'milk'],
-          id: 1,
-        },
-        {
-          title: 'Morning Mood',
-          slug: 'morning-mood',
-          ingredients: ['mango', 'lime', 'juice'],
-          id: 2,
-        },
-      ],
+      smoothies: [],
+      //   {
+      //     title: 'Ninja Brew',
+      //     slug: 'ninja-brew',
+      //     ingredients: ['bananas', 'coffee', 'milk'],
+      //     id: 1,
+      //   },
+      //   {
+      //     title: 'Morning Mood',
+      //     slug: 'morning-mood',
+      //     ingredients: ['mango', 'lime', 'juice'],
+      //     id: 2,
+      //   },
+      // ],
     };
   },
   methods: {
     deleteSmoothie(id) {
-      this.smoothies = this.smoothies.filter(smoothie => smoothie.id !== id);
+      // delete doc from firestore
+      db.collection('smoothies').doc(id).delete()
+        .then(() => {
+          this.smoothies = this.smoothies.filter(smoothie => smoothie.id !== id);
+        });
+      // this.smoothies = this.smoothies.filter(smoothie => smoothie.id !== id);
     },
   },
+  created() {
+    // fetch data from firestore
+    db.collection('smoothies').get()
+      .then(snapshot => {
+        snapshot.forEach(doc => {
+          let smoothie = doc.data();
+          smoothie.id = doc.id;
+          this.smoothies.push(smoothie);
+        });
+      });
+  }
 };
 </script>
 
