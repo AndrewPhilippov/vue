@@ -6,6 +6,10 @@
         <label for="title">Smoothie Title:</label>
         <input type="text" id="title" name="title" v-model="title">
       </div>
+      <div v-for="(ing, index) in ingredients" :key="index">
+        <label for="ingredient">Ingredient:</label>
+        <input type="text" name="ingredient" id="ingredient" v-model="ingredients[index]">
+      </div>
       <div class="field add-ingredient">
         <label for="add-ingredient">Add ingredient here:</label>
         <input @keydown.tab.prevent="addIng"
@@ -16,13 +20,16 @@
       </div>
       <div class="field center-align">
         <p v-if="feedback" class="red-text">{{ feedback }}</p>
-        <button class="btn pink">Add Smoothie</button>
+        <button type="submit" class="btn pink">Add Smoothie</button>
       </div>
     </form>
   </div>
 </template>
 
 <script>
+import slugify from 'slugify';
+import db from '@/firebase/init';
+
 export default {
   name: 'AddSmoothie',
   data() {
@@ -31,11 +38,29 @@ export default {
       another: null,
       ingredients: [],
       feedback: null,
+      slug: null,
     };
   },
   methods: {
     addSmoothie() {
-      console.log(this.title);
+      if (this.title) {
+        this.feedback = null;
+        this.slug = slugify(this.title, {
+          replacement: '-',
+          remove: /[$*_+~.()'"!\-:@]/g,
+          lower: true,
+        });
+        console.log(this.slug);
+        db.collection('smoothies').add({
+          title: this.title,
+          ingredients: this.ingredients,
+          slug: this.slug,
+        }).then(() => {
+          this.$router.push({ name: 'home' });
+        }).catch(err => console.log(err));
+      } else {
+        this.feedback = 'You must enter a smoothie title';
+      }
     },
     addIng() {
       if (this.another !== null) {
