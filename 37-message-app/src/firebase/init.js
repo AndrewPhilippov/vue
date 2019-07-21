@@ -2,14 +2,14 @@ import firebase from 'firebase';
 import firestore from 'firebase/firestore';
 
 // Your web app's Firebase configuration
-let firebaseConfig = {
-  apiKey: 'AIzaSyChf6g0700euqsrcKvQ_zj24sDEyjbOEcQ',
-  authDomain: 'vue-message-app-55.firebaseapp.com',
-  databaseURL: 'https://vue-message-app-55.firebaseio.com',
-  projectId: 'vue-message-app-55',
-  storageBucket: 'vue-message-app-55.appspot.com',
-  messagingSenderId: '488621794850',
-  appId: '1:488621794850:web:d8b144ed17b8faae',
+const firebaseConfig = {
+  apiKey: 'AIzaSyAMTCXqsVbXWRaMSKHt90xrQgd01k-2cXE',
+  authDomain: 'vue-messenger-55.firebaseapp.com',
+  databaseURL: 'https://vue-messenger-55.firebaseio.com',
+  projectId: 'vue-messenger-55',
+  storageBucket: 'vue-messenger-55.appspot.com',
+  messagingSenderId: '794705129867',
+  appId: '1:794705129867:web:7f60d2e08e3fdb49',
 };
 // Initialize Firebase
 const firebaseApp = firebase.initializeApp(firebaseConfig);
