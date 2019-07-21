@@ -7,7 +7,7 @@
           <label for="name">Enter your name</label>
           <input type="text" id="name" name="name" v-model="name">
           <p v-if="feedback" class="red-text">{{ feedback }}</p>
-          <button class="btn teal">
+          <button class="btn teal" @click="enterChat">
             <router-link :to="{ name: 'Chat' }" class="white-text">Enter Chat</router-link>
           </button>
         </form>
@@ -28,8 +28,8 @@ export default {
   methods: {
     enterChat() {
       if (this.name) {
-        this.feedback = null;
         this.$router.push({ name: 'Chat', params: { name: this.name } });
+        this.feedback = null;
       } else {
         this.feedback = 'You must enter your name before enter.';
       }
