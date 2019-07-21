@@ -3,7 +3,7 @@
     <h2 class="center teal-text">Vue Chat</h2>
     <div class="card">
       <div class="card-content">
-        <ul class="messages">
+        <ul class="messages" v-chat-scroll="messages">
           <li v-for="message in messages" :key="message.id">
             <span class="teal-text name">{{ message.name }}</span>
             <span class="grey-text text-darken-3">{{ message.content }}</span>
@@ -19,9 +19,9 @@
 </template>
 
 <script>
+import moment from 'moment';
 import NewMessage from './NewMessage';
 import db from '@/firebase/init';
-import moment from 'moment'
 
 export default {
   components: {
@@ -69,6 +69,19 @@ export default {
     & .time{
       display: block;
       font-size: .8em;
+    }
+    .messages{
+      max-height: 350px;
+      overflow: auto;
+      &::-webkit-scrollbar{
+        width: 3px;
+      }
+      &::-webkit-scrollbar-track{
+        background-color: #ddd;
+      }
+      &::-webkit-scrollbar-thumb{
+        background-color: #aaa;
+      }
     }
   }
 </style>
