@@ -20,7 +20,11 @@ export default new Router({
       component: Chat,
       props: true,
       beforeEnter: (to, from, next) => {
-        next();
+        if (to.params.name) {
+          next();
+        } else {
+          next({ name: 'Welcome' });
+        }
       },
     },
   ],
