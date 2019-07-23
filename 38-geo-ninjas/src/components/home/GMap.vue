@@ -18,7 +18,8 @@ export default {
       const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: this.lat, lng: this.lng },
         zoom: 6,
-        maxZoom: 20,
+        maxZoom: 15,
+        minZoom: 3,
         streetViewControl: false,
       });
     },
