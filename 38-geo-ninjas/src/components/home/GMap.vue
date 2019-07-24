@@ -6,6 +6,8 @@
 
 <script>
 import firebase from 'firebase';
+import db from '@/firebase/init';
+
 export default {
   name: 'GMap',
   data() {
@@ -16,24 +18,66 @@ export default {
   },
   methods: {
     renderMap() {
-      const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: this.lat, lng: this.lng },
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+          lat: this.lat,
+          lng: this.lng,
+        },
         zoom: 6,
-        maxZoom: 15,
+        maxZoom: 20,
         minZoom: 3,
         streetViewControl: false,
       });
     },
   },
   mounted() {
+    // Get current user
+    const user = firebase.auth().currentUser;
+    console.log(user);
+    // Get user geolocation
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.lat = position.coords.latitude;
+        this.lng = position.coords.longitude;
+
+        // Find user record and then update GEOCoords
+        db.collection('users')
+          .where('user_id', '==', user.uid)
+          .get()
+          .then((snapshot) => {
+            snapshot.forEach((doc) => {
+              db.collection('users')
+                .doc(doc.id)
+                .update({
+                  geolocation: {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                  },
+                });
+            });
+          })
+          .then(() => {
+            this.renderMap();
+          })
+          .catch(err => console.log(err));
+      }, (err) => {
+        console.log(err);
+        this.renderMap();
+      }, {
+        maximumAge: 60000,
+        timeout: 3000,
+      });
+    } else {
+      // position center by default values
+      this.renderMap();
+    }
     this.renderMap();
-    console.log(firebase.auth().currentUser);
   },
 };
 </script>
 
 <style scoped>
-  .google-map{
+  .google-map {
     width: 100%;
     height: 100%;
     margin: 0 auto;

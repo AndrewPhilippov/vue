@@ -23,7 +23,7 @@
 
 <script>
 import firebase from 'firebase';
-import Navbar from '../layouts/Navbar';
+import Navbar from '../layouts/Navbar.vue';
 
 export default {
   data() {
@@ -39,7 +39,7 @@ export default {
   name: 'Login',
   methods: {
     login() {
-      if (this.email, this.password) {
+      if (this.email && this.password) {
         firebase.auth().signInWithEmailAndPassword(this.email, this.password)
           .then((response) => {
             console.log(response.user);
