@@ -29,6 +29,7 @@
 <script>
 import slugify from 'slugify';
 import db from '@/firebase/init';
+import firebase from 'firebase';
 import Navbar from '../layouts/Navbar';
 
 export default {
@@ -45,7 +46,7 @@ export default {
   },
   methods: {
     signup() {
-      if (this.alias) {
+      if (this.alias && this.email && this.password) {
         this.slug = slugify(this.alias, {
           replacement: '-',
           remove: /[$*_+~.()'"!\-:@]/g,
@@ -56,13 +57,27 @@ export default {
           if (doc.exists) {
             this.feedback = 'This alias already exists';
           } else {
+            firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+              .then((response) => {
+                ref.set({
+                  alias: this.alias,
+                  geolocation: null,
+                  user_id: response.user.uid,
+                });
+              }).then(() => {
+                this.$router.push({ name: 'home' });
+              })
+              .catch((err) => {
+                console.log(err);
+                this.feedback = err.message;
+              });
             this.feedback = 'This alias is free to use';
           }
         });
         console.log(this.slug);
         this.feedback = null;
       } else {
-        this.feedback = 'You must enter the alias';
+        this.feedback = 'You must enter all fields';
       }
     },
   },
