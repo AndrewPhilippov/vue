@@ -5,5 +5,7 @@
 </template>
 
 <style lang="scss">
-
+  body{
+    background-color: #ddd;
+  }
 </style>

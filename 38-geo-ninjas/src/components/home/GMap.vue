@@ -40,9 +40,9 @@ export default {
               },
               map,
             });
-            //   Add click event to marker
+            //   Add click event to marker`
             marker.addListener('click', () => {
-              console.log(doc.id);
+              this.$router.push({ name: 'ViewProfile', params: { id: doc.id } });
             });
           }
         });
@@ -52,7 +52,6 @@ export default {
   mounted() {
     // Get current user
     const user = firebase.auth().currentUser;
-    console.log(user);
     // Get user geolocation
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {

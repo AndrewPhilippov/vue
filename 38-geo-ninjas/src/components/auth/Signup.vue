@@ -68,13 +68,11 @@ export default {
                 this.$router.push({ name: 'home' });
               })
               .catch((err) => {
-                console.log(err);
                 this.feedback = err.message;
               });
             this.feedback = 'This alias is free to use';
           }
         });
-        console.log(this.slug);
         this.feedback = null;
       } else {
         this.feedback = 'You must enter all fields';
