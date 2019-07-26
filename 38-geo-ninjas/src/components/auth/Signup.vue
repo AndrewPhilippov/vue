@@ -28,8 +28,9 @@
 
 <script>
 import slugify from 'slugify';
-import db from '@/firebase/init';
+import functions from 'firebase/functions';
 import firebase from 'firebase';
+import db from '@/firebase/init';
 import Navbar from '../layouts/Navbar';
 
 export default {
@@ -52,14 +53,14 @@ export default {
           remove: /[$*_+~.()'"!\-:@]/g,
           lower: true,
         });
-        const ref = db.collection('users').doc(this.slug);
-        ref.get().then((doc) => {
-          if (doc.exists) {
+        const checkAlias = firebase.functions().httpsCallable('checkAlias');
+        checkAlias({ slug: this.slug }).then((result) => {
+          if (!result.data.unique) {
             this.feedback = 'This alias already exists';
           } else {
             firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
               .then((response) => {
-                ref.set({
+                db.collection('users').doc(this.slug).set({
                   alias: this.alias,
                   geolocation: null,
                   user_id: response.user.uid,
