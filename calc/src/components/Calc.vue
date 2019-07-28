@@ -15,7 +15,7 @@
         name: 'Calc',
         computed: {
             gender() {
-                return this.$store.state.isFemale;
+                return this.$store.getters.getCurrentGender;
             }
         },
         methods: {

@@ -8,15 +8,17 @@ export default new Vuex.Store({
     isFemale: true,
   },
   getters: {
+    getCurrentGender: state => state.isFemale,
   },
   mutations: {
     changeGender() {
-      return this.isFemale = ! this.state.isFemale
+      console.log('i am changing the gender wooooahhh');
+      return this.state.isFemale = ! this.state.isFemale
     }
   },
   actions: {
     changeGender() {
-      return this.state.commit('changeGender');
+      this.state.commit('changeGender');
     }
   }
 })

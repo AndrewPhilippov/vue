@@ -22,9 +22,13 @@
     import Navbar from "./components/Navbar";
 
     export default {
-        props: ['gender'],
         components: {
             Navbar,
         },
+        computed: {
+            gender() {
+                return this.$store.getters.getCurrentGender;
+            }
+        }
     }
 </script>
