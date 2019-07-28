@@ -1,28 +1,30 @@
 <template>
-  <div class="calc">
-    <label for="gender">{{ gender }}</label>
-    <input type="checkbox" name="gender" id="gender" :gender="gender" v-model="gender">
-  </div>
+    <div class="calc">
+        <p>
+            <label>
+                <input :gender="gender" type="checkbox" @change="changeGender" />
+                <span>{{ gender }}</span>
+            </label>
+        </p>
+
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'Calc',
-  data() {
-    return {
-      gender: false,
-      age: null,
-      height: null,
-      weight: null,
-      activityLvl: null,
-      bodyFatPercentage: null,
-      proteinChosen: null,
-      carbsChosen: null,
+    export default {
+        name: 'Calc',
+        computed: {
+            gender() {
+                return this.$store.state.isFemale;
+            }
+        },
+        methods: {
+            changeGender() {
+                console.log('gender was changed');
+                this.$store.commit('changeGender')
+            }
+        }
     }
-  },
-}
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>
