@@ -1,24 +1,40 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    isFemale: true,
+    isMale: true,
   },
   getters: {
-    getCurrentGender: state => state.isFemale,
+    isCurrentlyMale() {
+      return this.state.isMale === true;
+    },
+    isCurrentlyFemale() {
+      return this.state.isMale === false;
+    },
   },
   mutations: {
-    changeGender() {
-      console.log('i am changing the gender wooooahhh');
-      return this.state.isFemale = ! this.state.isFemale
-    }
+    changeGender(state) {
+      state.isMale = !state.isMale;
+    },
+    setMale(state) {
+      state.isMale = true;
+    },
+    setFemale(state) {
+      state.isMale = false;
+    },
   },
   actions: {
-    changeGender() {
-      this.state.commit('changeGender');
+    changeGender({ commit }) {
+      commit('changeGender');
+    },
+    setMale({ commit }) {
+      commit('setMale');
+    },
+    setFemale({ commit }) {
+      commit('setFemale');
     }
   }
 })
