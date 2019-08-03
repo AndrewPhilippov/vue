@@ -35,7 +35,7 @@
         props: {},
         data() {
             return {
-                // isMale: false,
+            //
             }
         },
         computed: {
@@ -55,9 +55,11 @@
                 return this.$store.dispatch('changeGender');
             },
             setMale() {
+                document.getElementById('chooseGender').checked = false;
                 return this.$store.dispatch('setMale');
             },
             setFemale() {
+                document.getElementById('chooseGender').checked = true;
                 return this.$store.dispatch('setFemale');
             },
         },
@@ -69,6 +71,9 @@
     .gender{
         .genders{
             display: flex;
+            width: 250px;
+            align-items: center;
+            justify-content: space-between;
             & .male img,
             & .female img{
                 widrh: 100px;
