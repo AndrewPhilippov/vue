@@ -14,6 +14,7 @@
     .header{
         h1{
             font-size: 5em;
+            text-align: center;
         }
     }
 </style>

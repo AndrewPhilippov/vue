@@ -7,7 +7,7 @@
 
 <script>
     // @ is an alias to /src
-    import Header from "@/components/Header";
+    import Header from "@/components/layout/Header";
     import Calc from '@/components/Calc.vue';
 
     export default {
@@ -18,3 +18,10 @@
         }
     }
 </script>
+<style>
+    .home{
+        width: 80%;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+</style>
