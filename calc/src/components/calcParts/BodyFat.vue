@@ -1,12 +1,12 @@
 <template>
-    <section class="result">
-        <h3>Your Results are Below</h3>
+    <section class="body-fat">
+        <h3>Enter Here your Bodyfat Percentage</h3>
     </section>
 </template>
 
 <script>
     export default {
-        name: "Result"
+        name: "BodyFat"
     }
 </script>
 

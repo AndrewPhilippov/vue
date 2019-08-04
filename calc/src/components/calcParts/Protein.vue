@@ -1,12 +1,12 @@
 <template>
-    <section class="result">
-        <h3>Your Results are Below</h3>
+    <section class="protein">
+        <h3>Choose your Protein Intake</h3>
     </section>
 </template>
 
 <script>
     export default {
-        name: "Result"
+        name: "Protein"
     }
 </script>
 

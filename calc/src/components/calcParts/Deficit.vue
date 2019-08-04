@@ -1,5 +1,7 @@
 <template>
-    <div class="deficit">DEFICIT</div>
+    <div class="deficit">
+        <h3>Enter Here your Desired Daily Deficit</h3>
+    </div>
 </template>
 
 <script>

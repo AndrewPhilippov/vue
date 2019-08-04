@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <h1>Кето Калькулятор</h1>
+        <h1>KETO Calculator</h1>
     </header>
 </template>
 

@@ -1,5 +1,7 @@
 <template>
-    <div class="carbs">CARBS</div>
+    <section class="carbs">
+        <h3>Enter your daily carbs here</h3>
+    </section>
 </template>
 
 <script>

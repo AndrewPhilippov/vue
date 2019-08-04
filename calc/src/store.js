@@ -3,8 +3,9 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
+    isMetric: true,
     isMale: true,
   },
   getters: {
@@ -14,6 +15,12 @@ export default new Vuex.Store({
     isCurrentlyFemale() {
       return this.state.isMale === false;
     },
+    areUnitsMetric() {
+      return this.state.isMetric === true;
+    },
+    areUnitsImperial() {
+      return this.state.isMetric === false;
+    }
   },
   mutations: {
     changeGender(state) {
@@ -25,6 +32,15 @@ export default new Vuex.Store({
     setFemale(state) {
       state.isMale = false;
     },
+    changeUnits(state) {
+      state.isMetric = !state.isMetric;
+    },
+    setMetric(state) {
+      state.isMetric = true;
+    },
+    setImperial(state) {
+      state.isMetric = false;
+    }
   },
   actions: {
     changeGender({ commit }) {
@@ -35,6 +51,16 @@ export default new Vuex.Store({
     },
     setFemale({ commit }) {
       commit('setFemale');
+    },
+    changeUnits({ commit }) {
+      commit('changeUnits')
+    },
+    setMetric({ commit }) {
+      commit('setMetric');
+    },
+    setImperial({ commit }) {
+      commit('setImperial');
     }
   }
-})
+});
+export default store;

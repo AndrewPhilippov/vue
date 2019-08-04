@@ -1,0 +1,44 @@
+<template>
+    <section class="mesure-units">
+        <h3>Choose your preferable metric units</h3>
+        <div class="choose-units">
+            <v-icon dark large @click="setMetric">mdi-weight-kilogram</v-icon>
+            <label for="chooseUnit">
+                <input type="checkbox" name="chooseUnit" id="chooseUnit" hidden @change="changeUnit">
+                <span class="fake-checkbox"></span>
+            </label>
+            <v-icon dark large @click="setImperial">mdi-weight-pound</v-icon>
+        </div>
+    </section>
+</template>
+
+<script>
+    export default {
+        name: "MesureUnits",
+        data() {
+            return {
+                tooltip: 'Please, select units of measure to calculate your macros',
+            }
+        },
+        methods: {
+            changeUnit() {
+                return this.$store.dispatch('changeUnits');
+            },
+            setImperial() {
+                document.getElementById('chooseUnit').checked = true;
+                return this.$store.dispatch('setImperial');
+            },
+            setMetric() {
+                document.getElementById('chooseUnit').checked = false;
+                return this.$store.dispatch('setMetric');
+            }
+        }
+    }
+</script>
+
+<style scoped>
+    .choose-units{
+        display: flex;
+        align-items: center;
+    }
+</style>

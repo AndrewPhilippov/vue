@@ -1,8 +1,10 @@
 <template>
-    <div class="home">
-        <Header />
-        <Calc />
-    </div>
+    <v-app>
+        <div class="home">
+            <Header />
+            <Calc />
+        </div>
+    </v-app>
 </template>
 
 <script>
@@ -18,7 +20,7 @@
         }
     }
 </script>
-<style>
+<style scoped>
     .home{
         width: 80%;
         margin: 0 auto;
