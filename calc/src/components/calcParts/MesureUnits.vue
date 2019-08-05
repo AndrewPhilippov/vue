@@ -4,7 +4,7 @@
         <div class="choose-units">
             <v-icon dark large @click="setMetric">mdi-weight-kilogram</v-icon>
             <label for="chooseUnit">
-                <input type="checkbox" name="chooseUnit" id="chooseUnit" hidden @change="changeUnit">
+                <input type="checkbox" name="chooseUnit" id="chooseUnit" hidden @change="changeUnits">
                 <span class="fake-checkbox"></span>
             </label>
             <v-icon dark large @click="setImperial">mdi-weight-pound</v-icon>
@@ -13,7 +13,10 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex'
+
     export default {
+
         name: "MesureUnits",
         data() {
             return {
@@ -21,17 +24,17 @@
             }
         },
         methods: {
-            changeUnit() {
-                return this.$store.dispatch('changeUnits');
+            ...mapActions([
+                'changeUnits',
+            ]),
+            setMetric() {
+                document.getElementById('chooseUnit').checked = false;
+                return this.$store.dispatch('setMetric');
             },
             setImperial() {
                 document.getElementById('chooseUnit').checked = true;
                 return this.$store.dispatch('setImperial');
             },
-            setMetric() {
-                document.getElementById('chooseUnit').checked = false;
-                return this.$store.dispatch('setMetric');
-            }
         }
     }
 </script>
