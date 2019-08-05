@@ -40,5 +40,7 @@
     .choose-units{
         display: flex;
         align-items: center;
+        width: 250px;
+        justify-content: space-between;
     }
 </style>

@@ -52,12 +52,6 @@
             width: 250px;
             align-items: center;
             justify-content: space-between;
-
-            & .male img,
-            & .female img {
-                widrh: 100px;
-                height: 100px;
-            }
         }
     }
 </style>
