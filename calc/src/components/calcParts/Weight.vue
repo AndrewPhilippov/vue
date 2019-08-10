@@ -1,5 +1,5 @@
 <template>
-    <section class="weight">
+    <section class="calc-part weight">
         <h3>Enter Here your Weight</h3>
     </section>
 </template>
@@ -11,5 +11,7 @@
 </script>
 
 <style scoped>
-
+    .weight::before{
+        content: 'IV.';
+    }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <section class="carbs">
+    <section class="calc-part carbs">
         <h3>Enter your daily carbs here</h3>
     </section>
 </template>
@@ -11,5 +11,7 @@
 </script>
 
 <style scoped>
-
+    .carbs::before{
+        content: 'IX.';
+    }
 </style>

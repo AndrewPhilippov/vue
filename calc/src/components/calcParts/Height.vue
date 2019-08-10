@@ -1,5 +1,5 @@
 <template>
-    <section class="height">
+    <section class="calc-part height">
         <h3>Enter Here your Height</h3>
     </section>
 </template>
@@ -11,5 +11,7 @@
 </script>
 
 <style scoped>
-
+    .height::before{
+        content: 'V.';
+    }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="calc">
         <main class="main">
-            <MesureUnits/>
+            <MeasureUnits/>
             <Gender/>
             <Age/>
             <Weight/>
@@ -12,6 +12,7 @@
             <Activity/>
             <Protein/>
             <Result/>
+            <Deficit/>
         </main>
     </div>
 </template>
@@ -27,15 +28,17 @@
     import Result from "./calcParts/Result";
     import Carbs from "./calcParts/Carbs";
     import BodyFat from "./calcParts/BodyFat";
-    import MesureUnits from "./calcParts/MesureUnits";
+    import MeasureUnits from "./calcParts/MeasureUnits";
+    import Deficit from "./calcParts/Deficit";
 
     export default {
         name: 'Calc',
         props: {},
         components: {
-            MesureUnits,
+            MeasureUnits,
             BodyFat,
             Carbs,
+            Deficit,
             Gender,
             Weight,
             Height,
@@ -55,11 +58,14 @@
         grid-template-areas:
                 "munits munits munits munits"
                 "gender age weight height"
-                ". bodyfat bodyfat ."
-                "activity carbs fats deficit"
+                "protein bodyfat bodyfat activity"
+                "carbs fats fats deficit"
                 "result result result result";
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto;
+    }
+    .main > * {
+        margin: 20px;
     }
     .mesure-units{
         grid-area: munits;
@@ -89,7 +95,7 @@
         grid-area: fats;
     }
     .deficit{
-        grid-area: dificit;
+        grid-area: deficit;
     }
     .result{
         grid-area: result;

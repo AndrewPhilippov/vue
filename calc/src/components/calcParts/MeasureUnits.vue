@@ -1,5 +1,5 @@
 <template>
-    <section class="mesure-units">
+    <section class="calc-part mesure-units">
         <h3>Choose your preferable metric units</h3>
         <div class="choose-units">
             <v-icon dark large @click="setMetric">mdi-weight-kilogram</v-icon>
@@ -17,7 +17,7 @@
 
     export default {
 
-        name: "MesureUnits",
+        name: "MeasureUnits",
         data() {
             return {
                 tooltip: 'Please, select units of measure to calculate your macros',
@@ -39,11 +39,36 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .choose-units{
         display: flex;
         align-items: center;
         width: 250px;
         justify-content: space-between;
+    }
+    .calc-part{
+        &.mesure-units{
+            display: grid;
+            justify-items: center;
+            position: relative;
+            &::before{
+                content: "I.";
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                top: -40px;
+                left: -40px;
+                color: #fff;
+                font-size: 10em;
+                background-color: darkblue;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                font-family: Roboto, sans-serif;
+                font-weight: bold;
+                line-height: 100px;
+                border: 2px solid #fff;
+            }
+        }
     }
 </style>

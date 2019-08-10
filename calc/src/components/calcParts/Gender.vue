@@ -1,6 +1,6 @@
 <template>
-    <section class="gender">
-        <h3><span class="title-num">I. </span>Choose your gender</h3>
+    <section class="calc-part gender">
+        <h3>Choose your gender</h3>
         <div class="genders">
             <v-icon dark large @click="setMale">mdi-gender-male</v-icon>
             <label for="chooseGender">
@@ -52,6 +52,9 @@
             width: 250px;
             align-items: center;
             justify-content: space-between;
+        }
+        &.calc-part::before {
+            content: "II.";
         }
     }
 </style>

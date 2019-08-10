@@ -5,6 +5,7 @@
 </template>
 
 <style lang="scss">
+    $background: rgba(255,255,255, .2);
     #app{
         /** GENERAL **/
 
@@ -22,6 +23,7 @@
         }
         h3{
             font-size: 5em;
+            padding-bottom: 1em;
         }
         background-color: darkblue;
         display: grid;
@@ -54,6 +56,33 @@
         input:checked + span.fake-checkbox:after {
             left: calc(100% - 15px - 3px);
             transition: all .3s;
+        }
+        /* styling sections*/
+        section.calc-part{
+            background-color: $background;
+            padding: 4em;
+            border: 2px solid #fff;
+            color: #fff;
+            border-radius: 5px;
+            position: relative;
+        /* styling numbers of sections */
+            &::before{
+                position: absolute;
+                height: 80px;
+                width: 80px;
+                top: -30px;
+                left: -30px;
+                color: #fff;
+                font-size: 5em;
+                background-color: darkblue;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                font-family: Roboto, sans-serif;
+                font-weight: bold;
+                line-height: 80px;
+                border: 2px solid #fff;
+            }
         }
     }
 </style>

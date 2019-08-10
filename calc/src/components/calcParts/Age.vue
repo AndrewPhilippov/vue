@@ -1,5 +1,5 @@
 <template>
-    <section class="age">
+    <section class="calc-part age">
         <h3>Enter your birthday</h3>
         <v-menu
                 ref="menu"
@@ -66,5 +66,7 @@
 </script>
 
 <style scoped lang="scss">
-
+    .age::before{
+        content: 'III.';
+    }
 </style>

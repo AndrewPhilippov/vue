@@ -1,5 +1,5 @@
 <template>
-    <section class="body-fat">
+    <section class="calc-part body-fat">
         <h3>Enter Here your Bodyfat Percentage</h3>
     </section>
 </template>
@@ -11,5 +11,7 @@
 </script>
 
 <style scoped>
-
+    .body-fat::before{
+        content: 'VII.';
+    }
 </style>

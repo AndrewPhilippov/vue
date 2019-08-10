@@ -1,6 +1,12 @@
 <template>
     <section class="result">
-        <h3>Your Results are Below</h3>
+        <v-textarea
+                label="Your Results are Below"
+                auto-grow
+                outlined
+                rows="10"
+                row-height="15"
+        ></v-textarea>
     </section>
 </template>
 
