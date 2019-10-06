@@ -50,12 +50,14 @@
         },
         methods: {
             save (date) {
-                this.$refs.menu.save(date)
+                this.$refs.menu.save(date);
             },
             getCurrentAge () {
                 const now = new Date().getUTCFullYear();
                 const birthDate = new Date(this.date).getUTCFullYear();
-                return this.currentAge = now - birthDate;
+                this.currentAge = now - birthDate;
+                this.$store.commit('setAge', this.currentAge);
+                return this.currentAge;
             },
             handler(arg1, arg2) {
                 arg1();

@@ -20,16 +20,7 @@
                 tooltip: 'Please, select your gender first',
             }
         },
-        computed: {
-            isMale() {
-                return this.$store.state.isMale === true;
-            },
-            isFemale() {
-                return this.$store.state.isMale !== true;
-            }
-        },
         methods: {
-
             changeGender() {
                 return this.$store.dispatch('changeGender');
             },
