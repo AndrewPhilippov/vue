@@ -1,6 +1,6 @@
 # vue-news
 
-> Vue Newa
+> Vue News
 
 ## Build Setup
 
