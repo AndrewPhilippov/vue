@@ -5,7 +5,7 @@
                dark fixed>
 
       <v-app-bar-nav-icon @click.native.stop="sideNav = !sideNav"
-        class="hidden-md-and-up">
+                          class="hidden-md-and-up">
       </v-app-bar-nav-icon>
 
       <v-toolbar-title>News</v-toolbar-title>
@@ -46,15 +46,19 @@
           :key="item.title"
           link
         >
-            <v-list-item-icon>
-              <v-icon>
-                  {{ item.icon }}
-              </v-icon>
-            </v-list-item-icon>
+          <v-list-item-icon>
+            <v-icon>
+              {{ item.icon }}
+            </v-icon>
+          </v-list-item-icon>
 
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
+          <v-list-item-content>
+            <v-list-item-title>
+              <nuxt-link :to="item.link" tag="span">
+                {{ item.title }}
+              </nuxt-link>
+            </v-list-item-title>
+          </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
