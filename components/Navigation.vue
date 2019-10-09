@@ -46,13 +46,15 @@
           :key="item.title"
           link
         >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+            <v-list-item-icon>
+              <v-icon>
+                  {{ item.icon }}
+              </v-icon>
+            </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
+            <v-list-item-content>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -67,12 +69,12 @@
             return {
                 sideNav: false,
                 items: [
-                    {title: 'Dashboard', icon: 'mdi-view-dashboard'},
-                    {title: 'Politics', icon: 'mdi-newspaper'},
-                    {title: 'Economics', icon: 'mdi-bank'},
-                    {title: 'Culture', icon: 'mdi-book-open-page-variant'},
-                    {title: 'Sports', icon: 'mdi-soccer'},
-                    {title: 'Health', icon: 'mdi-help-box'},
+                    {title: 'Dashboard', icon: 'mdi-view-dashboard', link: '/'},
+                    {title: 'politics', icon: 'mdi-newspaper', link: '/politics'},
+                    {title: 'Economics', icon: 'mdi-bank', link: '/economics'},
+                    {title: 'culture', icon: 'mdi-book-open-page-variant', link: '/culture'},
+                    {title: 'sports', icon: 'mdi-soccer', link: '/sports'},
+                    {title: 'health', icon: 'mdi-help-box', link: '/economics'},
                 ],
                 right: null,
             }
