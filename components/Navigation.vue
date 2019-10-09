@@ -4,14 +4,15 @@
     <v-app-bar color="deep-purple darken-4"
                dark fixed>
 
-      <v-app-bar-nav-icon @click.native.stop="sideNav = !sideNav">
+      <v-app-bar-nav-icon @click.native.stop="sideNav = !sideNav"
+        class="hidden-md-and-up">
       </v-app-bar-nav-icon>
 
       <v-toolbar-title>News</v-toolbar-title>
 
       <div class="flex-grow-1"></div>
 
-      <v-toolbar-items>
+      <v-toolbar-items class="hidden-sm-and-down">
         <v-btn text v-for="item in items">
           <v-icon icon left>{{ item.icon }}</v-icon>
           {{ item.title }}
