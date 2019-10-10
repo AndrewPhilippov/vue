@@ -6,7 +6,7 @@
     export default {
         name: "Politics",
         data() {
-            
+
         }
     }
 </script>

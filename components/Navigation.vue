@@ -74,11 +74,11 @@
                 sideNav: false,
                 items: [
                     {title: 'Dashboard', icon: 'mdi-view-dashboard', link: '/'},
-                    {title: 'politics', icon: 'mdi-newspaper', link: '/politics'},
-                    {title: 'Economics', icon: 'mdi-bank', link: '/economics'},
-                    {title: 'culture', icon: 'mdi-book-open-page-variant', link: '/culture'},
-                    {title: 'sports', icon: 'mdi-soccer', link: '/sports'},
-                    {title: 'health', icon: 'mdi-help-box', link: '/economics'},
+                    {title: 'politics', icon: 'mdi-newspaper', link: '/news/politics'},
+                    {title: 'Economics', icon: 'mdi-bank', link: '/news/economics'},
+                    {title: 'culture', icon: 'mdi-book-open-page-variant', link: '/news/culture'},
+                    {title: 'sports', icon: 'mdi-soccer', link: '/news/sports'},
+                    {title: 'health', icon: 'mdi-help-box', link: '/news/economics'},
                 ],
                 right: null,
             }
